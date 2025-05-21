@@ -37,13 +37,13 @@ class DriverController extends Controller
         return redirect()->route('driver')->with(['success'=>'Data berhasil ditambahkan', 'failed'=>"Data gagal ditambahkan"]);
     }
 
-    public function update($id) {
+    public function edit($id) {
         $driver = Driver::findOrFail($id);
 
         return view('actions.editDriver', compact('driver'));
     }
 
-    public function put(Request $request, $id) {
+    public function update(Request $request, $id) {
         $validated=$request->validate([
             'kd_driver'=>'required',
             'name'=>'required|max:80',

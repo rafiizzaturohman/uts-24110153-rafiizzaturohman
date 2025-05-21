@@ -17,8 +17,8 @@ Route::get('/driver/create', [App\Http\Controllers\DriverController::class, 'cre
 
 Route::post('/driver/store', [App\Http\Controllers\DriverController::class, 'store'])->name('storeDriver');
 
-Route::get('/driver/{id}/edit', [App\Http\Controllers\DriverController::class, 'update'])->name('editDriver');
+Route::get('/driver/{id}/edit', [App\Http\Controllers\DriverController::class, 'edit'])->name('editDriver');
 
-Route::put('/driver/{id}', [App\Http\Controllers\DriverController::class, 'put'])->name('putDriver');
+Route::put('/driver/{id}', [App\Http\Controllers\DriverController::class, 'update'])->name('putDriver');
 
 Route::delete('/delete/{id}', [App\Http\Controllers\DriverController::class, 'delete'])->name('destroy');
